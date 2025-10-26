@@ -13,13 +13,15 @@
             <form id="pizza_info">
                 <fieldset>
                     <div>
+                        <!--Input for the number of pizzas, and only accept valid numbers in the range 1-50-->
                         <label for="quantity">Number of pizzas:</label>
                         <input type="number" name="quantity" id="quantity" value="1" max=50 min=1 required />
                     </div>
 
                     <div>
+                        <!--Select input for pizza sizes, the first option will be the initally selected and the user will have to select one of the other three to submit the form-->
                         <label for="size">Size: </label>
-                        <select name="size" id="size">
+                        <select name="size" id="size" required>
                             <option value="">--Select a size--</option>
                             <option value="small">Small - 8 Slices</option>
                             <option value="medium">Medium - 10 Slices</option>
@@ -28,17 +30,18 @@
                     </div>
 
                     <div>
+                    <!--'Round' will be selected by default but users can change it the square if they would like to-->
                         <label for="shape">Shape: </label>
                         <select name="shape" id="shape">
-                            <option value="">--Select a shape--</option>
-                            <option value="round">Round</option>
+                            <option value="round" selected>Round</option>
                             <option value="square">Square</option>
                         </select>
                     </div>
-                    <p>Select an order type</p>
-                    <div class="buttons">
+                    <div>
+                        <p>Select an order type</p>
+                        <!--With one button marked 'required', one of these radio buttons will have to be selected to submit-->
                         <label for="pickup">Pickup</label>
-                        <input type="radio" name="order-type" id="pickup">
+                        <input type="radio" name="order-type" id="pickup" required>
 
                         <label for="dine-in">Dine-in</label>
                         <input type="radio" name="order-type" id="dine-in">
@@ -47,17 +50,14 @@
                         <input type="radio" name="order-type" id="delivery">
                     </div>
                 </fieldset>
-                
 
+                <!--Toppings will get its own fieldset, with checkboxes to select multiple different toppings-->
                 <fieldset>
                     <legend>Select your toppings</legend>
-                    
-                    
                     <div>
                         <label for="topping1">Pepperoni</label>
                         <input type="checkbox" name="toppings[]" id="topping1" value="pepperoni" />
                     </div>
-
                     <div>
                         <label for="topping2">Mushrooms</label>
                         <input type="checkbox" name="toppings[]" id="topping2" value="mushrooms" />
@@ -72,40 +72,34 @@
                         <label for="topping4">Peppers</label>
                         <input type="checkbox" name="toppings[]" id="topping2" value="peppers" />
                     </div>
-
                     <div>
                         <label for="topping5">Olives</label>
                         <input type="checkbox" name="toppings[]" id="topping2" value="olives" />
                     </div>
-
                     <div>
                         <label for="topping6">Sausage</label>
                         <input type="checkbox" name="toppings[]" id="topping2" value="sausage" />
                     </div>
-
                     <div>
                         <label for="topping7">Pineapple</label>
                         <input type="checkbox" name="toppings[]" id="topping2" value="pineapple" />
                     </div>
-
                     <div>
                         <label for="topping8">Bacon</label>
-                        <input type="checkbox" name="toppings[]" id="topping2" value="" />
+                        <input type="checkbox" name="toppings[]" id="topping2" value="bacon" />
                     </div>
 
                     <div>
                         <label for="topping9">Spinach</label>
-                        <input type="checkbox" name="toppings[]" id="topping2" value="" />
+                        <input type="checkbox" name="toppings[]" id="topping2" value="spinach" />
                     </div>
-
                     <div>
                         <label for="topping10">Extra Cheese</label>
-                        <input type="checkbox" name="toppings[]" id="topping2" value="" />
+                        <input type="checkbox" name="toppings[]" id="topping2" value="x-cheese" />
                     </div>
-
                 </fieldset>
-                <input type="Submit" value="Submit" />
-                <input type="Reset" value="Reset" />
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Reset" />
             </form>
         </main>
         <footer>
