@@ -6,3 +6,10 @@ header h1 {
     margin-top: 0;
     color: #0571b7;
 }
+
+.order-summary {
+    /* Creates border, inline-block wraps closely instead of the border taking the whole width of the screen */
+    border: 1px solid black;
+    display: inline-block;
+    padding: 8px 8px;
+}

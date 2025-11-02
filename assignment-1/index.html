@@ -11,11 +11,11 @@
     <body>
         <header>
                 <img alt="Georgian Pizzeria logo" src="images/logo.png" width="175" height="128">
-                <h1 h>Georgian Pizzeria</h1>
-                <h3>Build your pizza(s) here. Customize it to however you like it!</h3>
+                <h1>Georgian Pizzeria</h1>
+                <h2>Build your pizza(s) here. Customize it to however you like it!</h3>
         </header>
         <main>
-            <form id="pizza_info">
+            <form id="pizza_info" method="get" action="order-confirm.php">
                 <fieldset>
                     <div>
                         <!--Input for the number of pizzas, and only accept valid numbers in the range 1-50-->
@@ -46,13 +46,13 @@
                         <p>Select an order type</p>
                         <!--With one button marked 'required', one of these radio buttons will have to be selected to submit-->
                         <label for="pickup">Pickup</label>
-                        <input type="radio" name="order-type" id="pickup" required>
+                        <input type="radio" name="order-type" id="pickup" value="pickup" required>
 
                         <label for="dine-in">Dine-in</label>
-                        <input type="radio" name="order-type" id="dine-in">
+                        <input type="radio" name="order-type" id="dine-in" value="dine-in">
 
                         <label for="delivery">Delivery</label>
-                        <input type="radio" name="order-type" id="delivery">
+                        <input type="radio" name="order-type" id="delivery" value="delivery">
                     </div>
                 </fieldset>
 
