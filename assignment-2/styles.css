@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+body {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffeeb0; /* similar to the poster's background */
+    font-family: 'Playfair Display', serif;
+    color: black;
+    line-height: 1.5;
+    text-align: center;
+}
+
+header p {
+    font-style: italic;
+    color: #d32f2f; /* Poster's red */
+    margin-bottom: -10px;
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6rem;
+    margin: 0;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 0px #d32f2f;
+}
+
+img {
+    max-width: 100%;
+    width: 300px;
+    border: 5px solid white;
+    box-shadow: 5px 5px 15px black;
+    transform: rotate(-2deg);
+}
+
+figcaption {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: #6a6363;
+    font-style: italic;
+}
+
+div#about {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div#about a{
+    display: inline-block;
+    padding: 10px;
+    border: 2.4px solid #d32f2f;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    background-color:#d32f2f;
+}
+
+div#about a:hover {
+    background-color: transparent;
+    color:black
+}
+
+
+section#cast-list {
+    font-family: 'Oswald', sans-serif;
+}
+
+section#cast-list h3 {
+    font-size: 2rem;
+    color: #2e7d32; /* The Green from the cast list on the poster */
+}
+
+/* 
+Using FlexBox for this list: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout 
+*/
+section#cast-list ul {
+    max-width: 700px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px
+}
+
+section#cast-list li {
+    text-transform: uppercase;
+    border: 2px solid #2e7d32; /* Green border */
+    font-size: 1.5rem;
+    padding: 5px 15px;
+}
+
+section#credits {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 50%); /* rgba to make background color transparent to document background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section#credits h4 {
+    color: #d32f2f;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+section#credits p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+footer {
+    background-color: rgb(41, 38, 38);
+    color: #ffeeb0;
+    margin-top: 50px;
+    padding: 2.5px;
+}
+
+div#tech {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+footer p small {
+    opacity: 0.7;
+}
