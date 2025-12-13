@@ -13,7 +13,21 @@
 
     nav img {
         align-self: center;
+        justify-self: center;
     }
+
+    div#nav-icons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    img#menu-icon {
+        margin-left: 30px;
+    }
+
+    
 }
 /* For desktop devices or maximized windows */
 @media (min-width: 776px) {
@@ -32,6 +46,19 @@
         float: left;
         align-self: center;
         justify-self: center;
+    }
+
+    /* Hide the menu icon on larger screens */
+    nav #menu-icon {
+        display: none;
+    }
+
+    div#nav-icons {
+        display: flex;
+        width: auto;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
     }
 }
 
