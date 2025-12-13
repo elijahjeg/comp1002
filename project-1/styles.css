@@ -1,5 +1,5 @@
 /* For mobile devices or minimized windows */
-@media (max-width: 775px) {
+@media (max-width: 800px) {
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -9,6 +9,7 @@
     nav ul {
         margin-left: 0;
         flex-direction: column;
+        display: none; /* Hide the menu items by default */
     }
 
     nav img {
@@ -23,20 +24,27 @@
         align-items: center;
     }
 
+    /* Adjust the menu icon to not move when clicked */
     img#menu-icon {
-        margin-left: 30px;
+        margin-left: 46px;
+    }
+
+    /* Change cursor to pointer when hovering over the menu icon */
+    img#menu-icon:hover {
+        cursor: pointer;
     }
 
     
 }
 /* For desktop devices or maximized windows */
-@media (min-width: 776px) {
+@media (min-width: 801px) {
     nav {
         display: flex;
         width: 100%;
     }
 
     nav ul {
+        display: flex;
         flex-direction: row;
         align-items: center;
     }
@@ -48,8 +56,9 @@
         justify-self: center;
     }
 
+
     /* Hide the menu icon on larger screens */
-    nav #menu-icon {
+    img#menu-icon {
         display: none;
     }
 
@@ -79,7 +88,6 @@ nav {
 /* Style the list of links */
 nav ul {
     list-style-type: none;
-    display: flex;
     gap: 20px;
     justify-content: right;
 }
@@ -113,4 +121,10 @@ table th, table td {
 
 .selected {
     border-bottom: solid 2px white;
+}
+
+main {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
 }
