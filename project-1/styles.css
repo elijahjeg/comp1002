@@ -27,11 +27,22 @@ nav ul li a {
     color: white;
 }
 
-header {
+/* Add padding everywhere but the bottom of the header */
+header h1 {
     padding: 20px 20px 0 20px;
     margin-top: 50px;
 }
 
+/* Style the secondary header */
+header h2 {
+    padding-left: 20px;
+    margin-top: 5px;
+    font-weight: normal;
+    font-style: italic;
+    color: gray;
+}
+
+/* Style the table to take full width and have collapsed borders */
 table {
     width: 100%;
     display: inline-block;
@@ -46,40 +57,43 @@ table th, table td {
     text-align: left;
 }
 
-
+/* Highlight the selected navigation link */
 .selected {
     border-bottom: solid 2px white;
 }
 
+/* Main content styles */
 main {
     padding: 20px;
 }
 
+/* Style paragraphs in main content */
 main p {
     margin-top: 0;
     line-height: 1.6;
     font-size: 1.1em;
 }
 
-main figure {
-    float: right;
-}
 
+/* Style figcaption in main content */
 main figure figcaption {
     text-align: center;
     font-style: italic;
     font-size: 0.9em;
 }
 
+/* Form styles */
 form {
     padding: 10px;
     border: 2px solid lightgray;
 }
 
+/* Style form elements with margin for spacing */
 form div {
     margin-bottom: 15px;
 }
 
+/* Style form labels and inputs */
 form label {
     display: block;
     margin-bottom: 5px;
@@ -90,20 +104,24 @@ form select {
     padding: 8px;
 }
 
+/* Hide radio buttons for star rating */
 form input[type="radio"] {
     display: none;
 }
 
+/* Style star rating labels */
 div#rating-section {
     display: flex;
     gap: 10px;
 }
 
+/* Style each star label */
 div#rating-section label {
     display: inline-block;
     cursor: pointer;
 }
 
+/* Footer styles */
 footer {
     background-color: black;
     color: white;
@@ -120,8 +138,8 @@ div#feedback-banner {
     color: #155724;
     border: 1px solid #c3e6cb;
     padding: 10px;
+    margin-top: 50px; /* To avoid overlap with fixed navbar */
     margin-bottom: 20px;
-    border-radius: 5px; /* Rounded corners */
     display: none; /* Hidden by default */
     justify-content: space-between;
     align-items: center;
@@ -132,6 +150,11 @@ p#close-button {
     font-weight: bold;
     cursor: pointer;
     padding-right: 20px;
+}
+
+/* Style list items in main content */
+main li {
+    padding: 10px 0;
 }
 
 /* For mobile devices or minimized windows */
@@ -158,6 +181,7 @@ p#close-button {
         justify-self: center;
     }
 
+    /* Display the menu icon on smaller screens */
     div#nav-icons {
         display: flex;
         width: 100%;
@@ -172,11 +196,15 @@ p#close-button {
 
     /* Center the figure in main content on small screens */
     main figure {
-        float: none;
         display: block;
         margin: 0 auto;
     }
 
+    /* Center the image inside the figure */
+    main figure img {
+        display: block;
+        margin: 0 auto;
+    }
     
 }
 /* For desktop devices or maximized windows */
@@ -186,12 +214,14 @@ p#close-button {
         width: 100%;
     }
 
+    /* Arrange the menu items in a row */
     nav ul {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
+    /* Align the logo image in the nav bar */
     nav img {
         display: flex;
         float: left;
@@ -213,7 +243,14 @@ p#close-button {
         gap: 20px;
     }
 
+    /* Set paragraph width in main content for better readability */
     main p {
         width: 50%;
+    }
+
+    /* Float the figure to the right in main content on large screens */
+    figure {
+        float: right;
+        margin: 0 0 15px 15px;
     }
 }

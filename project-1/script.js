@@ -18,6 +18,9 @@ window.addEventListener("resize", () => {
     if (window.innerWidth > 800) {
         navLinks.style.display = "flex";
     }
+    else {
+        navLinks.style.display = "none"; // Hide nav links on smaller screens by default
+    }
 });
 
 // Fill the empty star ratings when radio buttons are selected
