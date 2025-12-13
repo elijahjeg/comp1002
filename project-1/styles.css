@@ -89,6 +89,21 @@ form label {
 form select {
     padding: 8px;
 }
+
+form input[type="radio"] {
+    display: none;
+}
+
+div#rating-section {
+    display: flex;
+    gap: 10px;
+}
+
+div#rating-section label {
+    display: inline-block;
+    cursor: pointer;
+}
+
 footer {
     background-color: black;
     color: white;

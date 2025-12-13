@@ -20,6 +20,24 @@ window.addEventListener("resize", () => {
     }
 });
 
+// Fill the empty star ratings when radio buttons are selected
+const ratingRadios = document.querySelectorAll('input[name="rating"]');
+ratingRadios.forEach((radio) => {
+    radio.addEventListener("change", () => {
+        const ratingValue = parseInt(radio.value);
+        const stars = document.querySelectorAll('#rating-section label');
+        stars.forEach((star, index) => {
+            const img = star.querySelector("img");
+            if (index < ratingValue) {
+                img.src = "images/star-filled.png";
+            }
+            else {
+                img.src = "images/star-empty.png";
+            }
+        });
+    });
+});
+
 // Feedback form submission handling
 const feedbackForm = document.getElementById("feedbackForm");
 if (feedbackForm) { // Check if feedbackForm exists on the page
@@ -40,4 +58,14 @@ if (feedbackForm) { // Check if feedbackForm exists on the page
         const feedbackBanner = document.getElementById("feedback-banner");
         feedbackBanner.style.display = "none";
     });
+
+    feedbackForm.addEventListener("reset", () => {
+        const stars = document.querySelectorAll('#rating-section label');
+        stars.forEach((star) => {
+            const img = star.querySelector("img");
+            img.src = "images/star-empty.png";
+        });
+    });
 }
+
+
