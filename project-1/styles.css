@@ -1,21 +1,73 @@
+/* For mobile devices or minimized windows */
+@media (max-width: 775px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        display: inline-flex;
+    }
+
+    nav ul {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    nav img {
+        align-self: center;
+    }
+}
+/* For desktop devices or maximized windows */
+@media (min-width: 776px) {
+    nav {
+        display: flex;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        display: flex;
+        float: left;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styles */
 nav {
     background-color: black;
     padding: 10px;
+    position: fixed; /* Fix the navbar to the top, even when scrolling */
+    top: 0;
+    box-sizing: border-box;
 }
 
+/* Style the list of links */
 nav ul {
     list-style-type: none;
-
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: right;
 }
 
+/* Style each link to appear white and not the default link underline */
 nav ul li a {
     padding: 10px;
     margin: 0;
     text-decoration: none;
     color: white;
+}
+
+header {
+    margin-top: 100px;
+    text-align: center;
 }
 
 .selected {
