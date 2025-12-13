@@ -97,6 +97,20 @@ header {
     text-align: center;
 }
 
+table {
+    width: 100%;
+    display: inline-block;
+    border-collapse: collapse;
+    
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+
 .selected {
     border-bottom: solid 2px white;
 }
