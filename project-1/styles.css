@@ -1,15 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: black;
+    padding: 10px;
+    position: fixed; /* Fix the navbar to the top, even when scrolling */
+    top: 0;
+    box-sizing: border-box;
+}
+
+/* Style the list of links */
+nav ul {
+    list-style-type: none;
+    gap: 20px;
+    justify-content: right;
+}
+
+/* Style each link to appear white and not the default link underline */
+nav ul li a {
+    padding: 10px;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+table {
+    width: 100%;
+    display: inline-block;
+    border-collapse: collapse;
+    
+}
+
+/* Style table headers and cells */ 
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+
+.selected {
+    border-bottom: solid 2px white;
+}
+
+main {
+    padding: 20px;
+}
+
+main figure {
+    float: right;
+}
+
+main figure figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+form {
+    padding: 10px;
+    border: 2px solid lightgray;
+}
+
+
 /* For mobile devices or minimized windows */
 @media (max-width: 800px) {
     nav {
         flex-direction: column;
         align-items: flex-start;
-        display: inline-flex;
+        display: flex;
+        width: 100%;
     }
 
     nav ul {
-        margin-left: 0;
         flex-direction: column;
         display: none; /* Hide the menu items by default */
+        padding-left: 0;
+    }
+
+    nav ul li a {
+        padding: 10px 5px;
     }
 
     nav img {
@@ -24,14 +102,16 @@
         align-items: center;
     }
 
-    /* Adjust the menu icon to not move when clicked */
-    img#menu-icon {
-        margin-left: 46px;
-    }
-
     /* Change cursor to pointer when hovering over the menu icon */
     img#menu-icon:hover {
         cursor: pointer;
+    }
+
+    /* Center the figure in main content on small screens */
+    main figure {
+        float: none;
+        display: block;
+        margin: 0 auto;
     }
 
     
@@ -69,62 +149,4 @@
         align-items: center;
         gap: 20px;
     }
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Navigation bar styles */
-nav {
-    background-color: black;
-    padding: 10px;
-    position: fixed; /* Fix the navbar to the top, even when scrolling */
-    top: 0;
-    box-sizing: border-box;
-}
-
-/* Style the list of links */
-nav ul {
-    list-style-type: none;
-    gap: 20px;
-    justify-content: right;
-}
-
-/* Style each link to appear white and not the default link underline */
-nav ul li a {
-    padding: 10px;
-    margin: 0;
-    text-decoration: none;
-    color: white;
-}
-
-header {
-    margin-top: 100px;
-    text-align: center;
-}
-
-table {
-    width: 100%;
-    display: inline-block;
-    border-collapse: collapse;
-    
-}
-
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-
-.selected {
-    border-bottom: solid 2px white;
-}
-
-main {
-    padding: 20px;
-    margin-top: 20px;
-    text-align: left;
 }

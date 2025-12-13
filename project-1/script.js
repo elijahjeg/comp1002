@@ -15,7 +15,7 @@ menuIcon.addEventListener("click", () => {
 window.addEventListener("resize", () => {
     menuIcon = document.getElementById("menu-icon");
     const navLinks = document.querySelector("nav ul");
-    if (window.innerWidth >= 776) {
+    if (window.innerWidth > 800) {
         navLinks.style.display = "flex";
     }
 });
