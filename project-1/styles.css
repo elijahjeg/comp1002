@@ -28,7 +28,7 @@ nav ul li a {
 }
 
 header {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     margin-top: 50px;
 }
 
@@ -56,6 +56,7 @@ main {
 }
 
 main p {
+    margin-top: 0;
     line-height: 1.6;
     font-size: 1.1em;
 }
@@ -75,6 +76,19 @@ form {
     border: 2px solid lightgray;
 }
 
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form select {
+    padding: 8px;
+}
 footer {
     background-color: black;
     color: white;
@@ -85,6 +99,25 @@ footer {
     margin-top: 20px;
 }
 
+/* Feedback banner styles */
+div#feedback-banner {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px; /* Rounded corners */
+    display: none; /* Hidden by default */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close button styles */
+p#close-button {
+    font-weight: bold;
+    cursor: pointer;
+    padding-right: 20px;
+}
 
 /* For mobile devices or minimized windows */
 @media (max-width: 800px) {

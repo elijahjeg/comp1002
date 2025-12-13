@@ -19,3 +19,25 @@ window.addEventListener("resize", () => {
         navLinks.style.display = "flex";
     }
 });
+
+// Feedback form submission handling
+const feedbackForm = document.getElementById("feedbackForm");
+if (feedbackForm) { // Check if feedbackForm exists on the page
+    feedbackForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent default form submission
+        
+        // Show feedback banner
+        const feedbackBanner = document.getElementById("feedback-banner");
+        feedbackBanner.style.display = "flex";
+    
+        // Clear form fields
+        feedbackForm.reset();
+    });
+
+    // Close button handling for feedback banner
+    const closeButton = document.getElementById("close-button");
+    closeButton.addEventListener("click", () => {
+        const feedbackBanner = document.getElementById("feedback-banner");
+        feedbackBanner.style.display = "none";
+    });
+}
