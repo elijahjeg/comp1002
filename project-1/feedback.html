@@ -10,9 +10,12 @@
     <body>
         <header>
             <nav>
+                <!--Navigation Menu-->
                 <div id="nav-icons">
                     <a href="index.html"><img src="images/sony-logo.png" alt="Menu Icon" width="128" height="27"></a>
+                    <!--This will only be available on smaller screens-->
                     <img id="menu-icon" src="images/menu-icon.png" alt="Menu Icon" width="32" height="32">
+      
                 </div>
                 <ul>
                     <li>
@@ -32,6 +35,7 @@
                     </li>
                 </ul>
             </nav>
+            <!--Closeable banner confirming submition-->
             <div id="feedback-banner">
                 <p>Your feedback has been successfully submitted. Thank you for letting us know your opinion!</p>
                 <p id="close-button">x</p>
@@ -47,6 +51,7 @@
                     <input type="text" id="name" name="name" autocomplete="name" required>
                 </div>
                 <label for="rating">Rating (1-5):</label>
+                <!--The input elements will be hidden; the labels will be swapped with filled stars to confirm how many stars they choose-->
                 <div id="rating-section">
                     <label for="rating-1"><img src="images/star-empty.png", height="20" width="20"></label>
                     <input type="radio" id="rating-1" name="rating" value="1" required>
@@ -60,6 +65,7 @@
                     <input type="radio" id="rating-5" name="rating" value="5" required>
                 </div>
 
+                <!--This textarea lets the user add any additional comments that are necessary-->
                 <div>
                     <label for="comment">Additional Comments:</label>
                     <br>
